@@ -4,11 +4,11 @@
         <div class="nav-links">
             
             <!-- svelte-ignore missing-declaration -->
-            {#if link.isShow}
+            {#each nav as link}
 
-<a href={link.href} class="link">{link.title}</a>
-
-{/if}
+            <a href={link.href} class="link">{link.title}</a>
+            
+            {/each}
         </div>
     </div>
 </nav>
