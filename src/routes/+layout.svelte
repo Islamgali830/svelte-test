@@ -3,11 +3,11 @@
         <a href="/" class="nav-logo" title="Back to Homepage">Исламгали Зарипов</a>
         <div class="nav-links">
             <!-- svelte-ignore missing-declaration -->
-            {#each nav as link}
+            {#if link.isShow}
 
-            <a href={link.href} class="link">{link.title}</a>
-            
-            {/each}
+<a href={link.href} class="link">{link.title}</a>
+
+{/if}
         </div>
     </div>
 </nav>
@@ -21,23 +21,28 @@
     const nav = [
 {
     title: 'Обо мне',
-    href:'/about'
+    href:'/about',
+    isShow: true,
 },
 {
     title: 'Блог',
-    href:'/blog'
+    href:'/blog',
+    isShow: true,
 },
 {
     title: 'Портфолио',
-    href:'/project'
+    href:'/project',
+    isShow: true,
 },
 {
     title: 'Контакты',
-    href:'/contact'
+    href:'/contact',
+    isShow: true,
 },
 {
     title: 'temp',
-    href: '/temp'
+    href: '/temp',
+    isShow: true,
 }
     ]
     </script>
